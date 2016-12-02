@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Installing Infinite i Windows 2012 R2 with Update</title>
     <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <script src="../js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
@@ -20,11 +21,18 @@
             <div class="icon" id="mid-bar"></div>
             <div class="icon" id="bot-bar"></div>
         </div>
-        <div class="jumbotron col-lg-10" id="jumbotron">Infinite Corporation Knowledge Center</div>
+        <div class="jumbotron col-lg-8" id="jumbotron">Infinite Corporation Knowledge Center</div>
+        <a href="javascript:void(0)" onclick="openLogin()"><div class="col-lg-2 login-signup">Login</div></a>
     </div>
 
     <!-- Second row within container div -->
     <div class="row row-2 col-lg-12">
+        <h2 class="h2">Installing Infinite i on Windows 2012 R2 with Update</h2>
+        <p>Below is a tutorial that will walk you through the entire process of installing Infinite i on the Windows 2012 R2 with Update distribution of Windows.</p>
+    </div>
+
+    <!-- Third row within container div -->
+    <div class="row row-3 col-lg-12">
 
     </div>
 
@@ -32,11 +40,25 @@
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="../index.html"><div class="mini-link">Knowledge Center Home</div></a>
-        <a href="../installs.html"><div class="mini-link" style="padding-top: 10px;">Installation Guides</div></a>
+        <a href="../installs.html"><div class="mini-link">Installation Guides</div></a>
         <a href="#"><div class="mini-link">Database Setup Guides</div></a>
-        <a href="#"><div class="mini-link" style="padding-top: 10px;">Common Errors</div></a>
+        <a href="#"><div class="mini-link">Common Errors</div></a>
+        <a href="#"><div class="mini-link">Downloads</div></a>
+        <a href="request.html"><div class="mini-link">Request Content</div></a>
     </div>
     <!-- ## END the sidebar nav ## -->
+
+    <!-- ## BEGIN the login form ## -->
+    <div id="loginForm" class="login-form">
+        <a href="javascript:void(0)" class="closebtn closelog" onclick="closeLogin()">&times;</a>
+        <div id="loginData">
+            <p>Email: <input type="email" data-ng-model="email"></p>
+            <p>Verify Email: <input type="email" data-ng-model="verifyEmail"></p>
+            <p>First Name: <input type="text" data-ng-model="firstName"></p>
+            <p>Last Name: <input type="text" data-ng-model="lastName"></p>
+        </div>
+    </div>
+    <!-- ## END the login form ## -->
 </div>
 
 </body>

@@ -1,3 +1,8 @@
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -5,7 +10,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #96858F;
+    background-color: #A3B9BA;
     opacity: 1;
     overflow-x: hidden;
     padding-top: 60px;
@@ -18,17 +23,18 @@
     padding-left: 24px;
     padding-bottom: 8px;
     text-decoration: none;
-    font-size: 25px;
-    color: ghostwhite;
+    font-size: 22px;
     display: block;
     transition: 0.5s;
     margin: auto;
+    color: black;
 }
 
 .sidenav a div:hover {
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
     -webkit-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    position: relative;
 }
 
 .sidenav .closebtn {
@@ -51,22 +57,15 @@
     margin: 6px;
 }
 
-.header-img {
-    width: 35%;
-    height: 8%;
-    margin: -35px auto;
-    border-radius: 5px;
-    display: block;
-}
-
 body {
-    background-color: #afb9ff;
+    background-color: #4C797B;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .mini-link:hover {
     border: 1px solid ghostwhite;
+    text-underline: none;
 }
 
 .toggler {
@@ -78,10 +77,14 @@ body {
     margin: 40px auto;
 }
 
+.row-2 {
+
+}
+
 .mini-link {
     width: 150px;
     height: 44px;
-    background: #6D7993;
+    background-color: #207386;
     font-size: 15px;
     text-align: center;
     font-family: "Verdana";
@@ -89,6 +92,8 @@ body {
     padding: auto;
     display: table-cell;
     vertical-align: middle;
+    color: ghostwhite;
+
 }
 
 .closebtn:hover {
@@ -96,39 +101,33 @@ body {
     text-decoration-color: #d9534f;
     -moz-text-decoration-color: #d9534f;
     -webkit-text-decoration-color: #d9534f;
-
+    text-decoration: none;
+    transition: 0.5s;
 }
 
 .infinite-install-win {
-    width: 320px;
-    height: 88px;
-    background-color: #D5D5D5;
+    width: 8vw;
+    height: 4vw;
+    background-color: #207386;
     text-align: center;
     vertical-align: middle;
-    line-height: 25px;
+    line-height: .8vw;
     padding-top: 5px;
     border-radius: 5px;
     font-family: "Verdana";
-    font-size: 20px;
-}
+    font-size: .7vw;
+    margin-left: 10px;
+    color: ghostwhite;
+    text-decoration: none;
 
-#infinite-config-win {
-    width: 320px;
-    height: 88px;
-    background-color: #D5D5D5;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 25px;
-    padding-top: 5px;
-    border-radius: 5px;
-    font-family: "Verdana";
-    font-size: 20px;
 }
 
 .infinite-install-win:hover {
-    box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.4);
-    -webkit-box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+    border: 1px solid ghostwhite;
 }
 
 #toggle-span, #top-bar, #mid-bar, #bot-bar {
@@ -136,14 +135,184 @@ body {
 }
 
 .jumbotron {
-    background-color: #96858F;
-    color: ghostwhite;
+    background-color: #A3B9BA;
+    width: 50%;
+    font-family: "Old English Text MT";
+    margin-left: 100px;
+    margin-top: 5px;
+    align-content: center;
+    font-size: 2.5vw;
+    margin-right: 100px;
+    line-height: 0.1vw;
+    text-align: center;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.jumbotron-image {
+    height: 50px;
+    width: 200px;
+    position: relative;
+    margin-top: 5px;
+}
+
+.login-signup {
+    width: 100px;
+    height: 44px;
+    background-color: #A3B9BA;
     text-align: center;
     vertical-align: middle;
-    width: 50%;
-    margin-top: 5px;
+    line-height: 32px;
+    padding-top: 5px;
+    border-radius: 5px;
     font-family: "Verdana";
-    line-height: 2rem;
+    font-size: .75vw;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: black;
+}
+
+.login-signup:hover {
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    border: 1px solid ghostwhite;
+}
+
+.login-form {
+    width: 350px;
+    height: 300px;
+    background-color: #A3B9BA;
+    overflow-x: hidden;
+    transition: 0.5s;
+    position: fixed;
+    margin-top: 10%;
+    margin-left: 30%;
+    float: left;
+    text-align: center;
+    border-radius: 5px;
+    z-index: 1002;
+    display: none;
+}
+
+.closelog {
     font-size: 24px;
-    margin-left: 100px;
+    margin-left: 90%;
+    text-decoration: none;
+    color: ghostwhite;
+}
+
+.loginData p input {
+    float: right;
+}
+
+.signup {
+    text-decoration: none;
+    color: #d9534f;
+}
+
+.signup a:hover {
+    transition: 0.5s;
+}
+
+.loginHead {
+    text-align: center;
+    alignment: center;
+}
+
+.login-input {
+    width: 60%;
+    margin-right: 10px;
+}
+
+.login-button {
+    alignment: center;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1001;
+    position: fixed;
+    overflow: auto;
+    left: 0;
+    top: 0;
+}
+
+.install-guides {
+    background-color: #A3B9BA;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    border-radius: 5px;
+}
+
+.config-guides {
+    background-color: #A3B9BA;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.whats-new {
+    background-color: #A3B9BA;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    border-radius: 5px;
+}
+
+.about-kb {
+    background-color: #A3B9BA;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    border-radius: 5px;
+}
+
+.h2, .h3 {
+    font-size: 1.5vw;
+    border-bottom: 1px solid navajowhite;
+}
+
+p {
+    font-size: .8vw;
+    min-font-size: .6vw;
+}
+
+@media (max-width: 480px) {
+
+    .infinite-install-win {
+        margin-top: 5px;
+    }
+
+    .about-kb {
+
+    }
+}
+
+#signup-button {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+#login-button {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.footer {
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    position: absolute;
+    border-top: 1px solid navajowhite ;
+}
+
+.guide-spacer {
+    width: 100px;
 }

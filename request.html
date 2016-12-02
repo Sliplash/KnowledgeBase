@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Request Content</title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body class="embed-responsive" id="main">
+<div class="container-fluid">
+    <!-- First row within container div -->
+    <div class="row col-lg-12">
+        <div onclick="openNav()" class="toggler col-lg-2" id="toggle-div">
+            <div class="icon" id="top-bar"></div>
+            <div class="icon" id="mid-bar"></div>
+            <div class="icon" id="bot-bar"></div>
+        </div>
+        <div class="jumbotron col-lg-10" id="jumbotron">Infinite Corporation Knowledge Center</div>
+    </div>
+
+    <!-- ## BEGIN the sidebar nav ## -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html"><div class="mini-link">Knowledge Center Home</div></a>
+        <a href="installs.html"><div class="mini-link">Installation Guides</div></a>
+        <a href="#"><div class="mini-link">Database Setup Guides</div></a>
+        <a href="#"><div class="mini-link">Common Errors</div></a>
+        <a href="#"><div class="mini-link">Downloads</div></a>
+        <a href="request.html"><div class="mini-link">Request Content</div></a>
+    </div>
+    <!-- ## END the sidebar nav ## -->
+</div>
+<div data-ng-app="" data-ng-init="firstName='John'">
+    <p>Name : <input type="text" data-ng-model="name"></p>
+    <h1>You: {{name}}</h1>
+    <h1>Opponent: <span data-ng-bind="firstName"></span></h1>
+</div>
+</body>
+</html>
