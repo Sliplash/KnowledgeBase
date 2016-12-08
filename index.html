@@ -25,7 +25,7 @@
         <div class="jumbotron jumbotron-fluid col-lg-8" id="jumbotron">Infinite Corporation Knowledge Center</div>
 
         <a href="javascript:void(0)" onclick="openLogin()"><div class="col-lg-1 login-signup">Login</div></a>
-        <a href="javascript:void(0)" onclick="openSignUp()"><div class="col-lg-1 login-signup">Sign Up</div></a>
+        <a href="javascript:void(0)" onclick="openSignUp()"><div class="col-lg-1 login-signup">Register</div></a>
         <img class="jumbotron-image col-lg-8"src="images/infinite-logo.png" />
     </div>
 
@@ -66,9 +66,9 @@
     <!-- ## BEGIN the sidebar nav ## -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html"><div class="mini-link">Knowledge Center Home</div></a>
+        <a href="index.html"><div class="mini-link">Home</div></a>
         <a href="installs.html"><div class="mini-link">Installation Guides</div></a>
-        <a href="#"><div class="mini-link">Database Setup Guides</div></a>
+        <a href="#"><div class="mini-link">Database Guides</div></a>
         <a href="#"><div class="mini-link">Common Errors</div></a>
         <a href="#"><div class="mini-link">Downloads</div></a>
         <a href="request.html"><div class="mini-link">Request Content</div></a>
@@ -76,15 +76,13 @@
     <!-- ## END the sidebar nav ## -->
 
     <!-- ## BEGIN the login form and shading overlay ## -->
-    <div class="overlay embed-responsive col-lg-12" id="overlay" onclick="closeLogin()"></div>
+    <div class="overlay embed-responsive col-lg-12" onclick="closeLogin()"></div>
     <div id="loginForm" class="col-lg-12 login-form">
         <a href="javascript:void(0)" class="closebtn closelog" onclick="closeLogin()">&times;</a>
         <div class="loginData">
             <h6 class="loginHead">Login or <a href="javascript:void(0)" onclick="openSignUp()" class="signup">Sign Up</a></h6>
-            <p>Email: <input class="login-input" type="email" data-ng-model="email"></p>
-            <p>Verify Email: <input class="login-input"  type="email" data-ng-model="verifyEmail"></p>
-            <p>First Name: <input class="login-input" type="text" data-ng-model="firstName"></p>
-            <p>Last Name: <input class="login-input" type="text" data-ng-model="lastName"></p>
+            <p>Username/Email: <input class="login-input" id="loginEmail" type="email" placeholder="Username" required></p>
+            <p>Password: <input class="login-input"  id="loginPass" type="password" placeholder="Password" required></p>
         </div>
         <div>
             <button class="login-button" id="login-button" type="submit" onclick="submitLogin()">Log In</button>
@@ -94,24 +92,28 @@
     <!-- ## END the login form ## -->
 
     <!-- ## BEGIN the sign-up form and shading overlay ## -->
-    <div class="overlay embed-responsive col-lg-12" id="overlay-2" onclick="closeLogin()"></div>
-    <div id="signUpForm" class="col-lg-12 login-form">
-        <a href="javascript:void(0)" class="closebtn closelog" onclick="closeLogin()">&times;</a>
-        <div class="loginData">
-            <h6 class="loginHead">Login or <a href="javascript:void(0)" onclick="openSignUp()" class="signup">Sign Up</a></h6>
-            <p>Email: <input class="login-input" type="email" data-ng-model="email"></p>
-            <p>Verify Email: <input class="login-input"  type="email" data-ng-model="verifyEmail"></p>
-            <p>First Name: <input class="login-input" type="text" data-ng-model="firstName"></p>
-            <p>Last Name: <input class="login-input" type="text" data-ng-model="lastName"></p>
+    <div class="overlay-2 embed-responsive col-lg-12" onclick="closeSignUp()"></div>
+    <div id="signUpForm" class="col-lg-12 signup-form">
+        <a href="javascript:void(0)" class="closebtn closelog" onclick="closeSignUp()">&times;</a>
+        <div class="signUpData" id="signUpDataID">
+            <h6 class="signUpHead">Register</h6>
+            <p>Email: <input class="signup-input" type="email" id="email1" placeholder="Enter email" onblur="validateEmail()" onkeyup="validateEmail();validate()" required></p>
+            <p>Verify Email: <input class="signup-input"  type="email" id="email2" placeholder="Validate email" onblur="validateEmail()" onkeyup="validateEmail();validate()" required></p>
+            <p id="validEmailTag"></p>
+            <p>First Name: <input class="signup-input fName" type="text" id="fName" placeholder="First" onkeyup="validate()" required></p>
+            <p>Last Name: <input class="signup-input lName" type="text" id="lName" placeholder="Last" onkeyup="validate()" required></p>
         </div>
         <div>
-            <button class="login-button" id="login-button-2" type="submit" onclick="submitLogin()">Log In</button>
-            <button class="signup-button" id="signup-button-2" type="button" onclick="openSignUp()">Sign Up</button>
+            <button class="register-button" id="reg-button" type="submit" onclick="registerUser()">Register</button>
         </div>
     </div>
     <!-- ## END the sign-up form ## -->
 </div>
+<script>
+
+</script>
 <footer class="footer">&copy;Infinite Corporation 2016</footer>
+
 </body>
 
 </html>
