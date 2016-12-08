@@ -42,7 +42,9 @@ function closeSignUp() {
     document.getElementById("email2").value = "";
     document.getElementById("fName").value = "";
     document.getElementById("lName").value = "";
-    document.getElementById("validEmailTag").value = "";
+    document.getElementById("validEmailTag").innerHTML = "";
+    document.getElementById("validTag1").style.background = "none";
+    document.getElementById("validTag2").style.background = "none";
 }
 
 function submitLogin() {
@@ -60,11 +62,11 @@ function validateEmail() {
     var email2Str = email2.value;
 
     if(email1Str.indexOf("@infinitecorporation.com") > 0) {
-        document.getElementById("email1").style.background = "url(../images/valid.png) no-repeat right top";
+        document.getElementById("validTag1").style.background = "url(images/valid.png) no-repeat right";
 
     }
     if(email2Str.indexOf("@infinitecorporation.com") > 0) {
-        document.getElementById("email2").style.background = "url(../images/valid.png) no-repeat right top";
+        document.getElementById("validTag2").style.background = "url(images/valid.png) no-repeat right";
     }
 
     if(email1Str == email2Str && email1Str.indexOf("@infinitecorporation.com") > 0) {
@@ -81,10 +83,13 @@ function validate() {
     var email2 = document.getElementById("email2").value;
     var email1Len = document.getElementById("email1").value.length;
     var email2Len = document.getElementById("email2").value.length;
-    var fNameLen = $("#fName").length;
-    var lNameLen = $("#lName").length;
+    var fNameLen = document.getElementById("fName").value.length;
+    var lNameLen = document.getElementById("lName").value.length;
 
-    if(email1Len === email2Len && email1 == email2 && fNameLen > 0 && lNameLen > 0) {
+
+    if(email1Len === email2Len && email1 == email2 && fNameLen > 1 && lNameLen > 1) {
+        // Below line is used for debugging, so you can see values easily as they come through on keyup
+        //alert("email1Len = " + email1Len + "\nemail2Len = " + email2Len + "\nemail1 = " + email1 + "\nemail2 = " + email2 + "\nfNameLen = " + fNameLen + "\nlNameLen = " + lNameLen);
         document.getElementById("reg-button").disabled = false;
     }
     else {

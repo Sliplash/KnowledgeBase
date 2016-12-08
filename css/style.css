@@ -37,7 +37,7 @@ html, body {
 .sidenav .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
+    right: 0px;
     font-size: 36px;
     margin-left: 50px;
 }
@@ -102,30 +102,7 @@ body {
     transition: 0.5s;
 }
 
-.infinite-install-win {
-    width: 8vw;
-    height: 4vw;
-    background-color: #207386;
-    text-align: center;
-    vertical-align: middle;
-    line-height: .8vw;
-    padding-top: 5px;
-    border-radius: 5px;
-    font-family: "Verdana";
-    font-size: .7vw;
-    margin-left: 10px;
-    color: ghostwhite;
-    text-decoration: none;
 
-}
-
-.infinite-install-win:hover {
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
-    -webkit-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
-    text-decoration: none;
-    border: 1px solid ghostwhite;
-}
 
 #toggle-span, #top-bar, #mid-bar, #bot-bar {
     visibility: visible;
@@ -135,11 +112,11 @@ body {
     background-color: #A3B9BA;
     width: 50%;
     font-family: "Old English Text MT";
-    margin-left: 100px;
+    margin-left: 50px;
     margin-top: 5px;
     align-content: center;
     font-size: 2.5vw;
-    margin-right: 100px;
+    margin-right: 50px;
     line-height: 0.1vw;
     text-align: center;
     border-radius: 5px;
@@ -148,8 +125,8 @@ body {
 }
 
 .jumbotron-image {
-    height: 50px;
-    width: 200px;
+    height: 1.25vw;
+    width: 6vw;
     position: relative;
     margin-top: 5px;
 }
@@ -161,16 +138,15 @@ body {
  */
 
 .login-signup {
-    width: 100px;
-    height: 44px;
+    width: 4vw;
+    height: 1vw;
     background-color: #A3B9BA;
     text-align: center;
     vertical-align: middle;
-    line-height: 32px;
-    padding-top: 5px;
+    line-height: 1vw;
     border-radius: 5px;
     font-family: "Verdana";
-    font-size: .75vw;
+    font-size: .5vw;
     margin-top: 5px;
     margin-left: 5px;
     color: black;
@@ -185,7 +161,7 @@ body {
 
 .login-form {
     width: 20vw;
-    height: 10vw;
+    height: 15vw;
     background-color: #A4B9BF;
     overflow-x: hidden;
     transition: 0.5s;
@@ -201,7 +177,7 @@ body {
 
 .signup-form {
     width: 20vw;
-    height: 17vw;
+    height: 20vw;
     background-color: #A4B9BF;
     overflow-x: hidden;
     transition: 0.5s;
@@ -217,9 +193,9 @@ body {
 
 .closelog {
     font-size: 24px;
-    margin-left: 90%;
+    margin-left: 95%;
     text-decoration: none;
-    color: ghostwhite;
+    color: black;
 }
 
 .loginData p input {
@@ -303,6 +279,30 @@ body {
  * CSS for the guide div links and
  * the well to surround each section
  */
+.infinite-install-win {
+    width: 8vw;
+    height: 4vw;
+    background-color: #207386;
+    text-align: center;
+    vertical-align: middle;
+    line-height: .8vw;
+    padding-top: 5px;
+    border-radius: 5px;
+    font-family: "Verdana";
+    font-size: .7vw;
+    margin-left: 10px;
+    color: ghostwhite;
+    text-decoration: none;
+
+}
+
+.infinite-install-win:hover {
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+    border: 1px solid ghostwhite;
+}
 
 .install-guides {
     background-color: #A3B9BA;
@@ -324,6 +324,7 @@ body {
     padding-bottom: 15px;
     padding-top: 10px;
     border-radius: 5px;
+    margin-left: 10px;
 }
 
 .about-kb {
@@ -343,14 +344,15 @@ p {
     min-font-size: .6vw;
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
 
     .infinite-install-win {
         margin-top: 5px;
     }
 
-    .about-kb {
-
+    .login-form {
+        width: 200px;
+        height: 200px;
     }
 }
 
@@ -367,6 +369,15 @@ p {
     width: 100px;
 }
 
+#validTag1, #validTag2, #validEmailTag, #validFName, #validLName, #validUser, #validPass {
+    font-weight: bold;
+
+}
+
+#email1, #email2, #fName, #lName {
+    margin-right: 25px;]
+    font-weight: normal;
+}
 
 /*
  * Below CSS is for the valid

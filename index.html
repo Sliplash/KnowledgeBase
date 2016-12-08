@@ -81,27 +81,27 @@
         <a href="javascript:void(0)" class="closebtn closelog" onclick="closeLogin()">&times;</a>
         <div class="loginData">
             <h6 class="loginHead">Login or <a href="javascript:void(0)" onclick="openSignUp()" class="signup">Sign Up</a></h6>
-            <p>Username/Email: <input class="login-input" id="loginEmail" type="email" placeholder="Username" required></p>
-            <p>Password: <input class="login-input"  id="loginPass" type="password" placeholder="Password" required></p>
+            <p id="validUser">Email: <input class="login-input" id="loginEmail" type="email" placeholder="Username" required></p>
+            <p id="validPass">Password: <input class="login-input"  id="loginPass" type="password" placeholder="Password" required></p>
         </div>
         <div>
             <button class="login-button" id="login-button" type="submit" onclick="submitLogin()">Log In</button>
-            <button class="signup-button" id="signup-button" type="button" onclick="openSignUp()">Sign Up</button>
+            <button class="signup-button" id="signup-button" type="button" onclick="openSignUp()">Register</button>
         </div>
     </div>
     <!-- ## END the login form ## -->
 
-    <!-- ## BEGIN the sign-up form and shading overlay ## -->
+    <!-- ## BEGIN the registration form and shading overlay ## -->
     <div class="overlay-2 embed-responsive col-lg-12" onclick="closeSignUp()"></div>
     <div id="signUpForm" class="col-lg-12 signup-form">
         <a href="javascript:void(0)" class="closebtn closelog" onclick="closeSignUp()">&times;</a>
         <div class="signUpData" id="signUpDataID">
             <h6 class="signUpHead">Register</h6>
-            <p>Email: <input class="signup-input" type="email" id="email1" placeholder="Enter email" onblur="validateEmail()" onkeyup="validateEmail();validate()" required></p>
-            <p>Verify Email: <input class="signup-input"  type="email" id="email2" placeholder="Validate email" onblur="validateEmail()" onkeyup="validateEmail();validate()" required></p>
+            <p id="validTag1">Email: <input class="signup-input" type="email" id="email1" placeholder="Enter email" onkeyup="validate()" required></p>
+            <p id="validTag2">Verify Email: <input class="signup-input"  type="email" id="email2" placeholder="Validate email" onkeyup="validateEmail();validate()" required></p>
             <p id="validEmailTag"></p>
-            <p>First Name: <input class="signup-input fName" type="text" id="fName" placeholder="First" onkeyup="validate()" required></p>
-            <p>Last Name: <input class="signup-input lName" type="text" id="lName" placeholder="Last" onkeyup="validate()" required></p>
+            <p id="validFName">First Name: <input class="signup-input fName" type="text" id="fName" placeholder="First" onkeyup="validate()" required></p>
+            <p id="validLName">Last Name: <input class="signup-input lName" type="text" id="lName" placeholder="Last" onkeyup="validate()" required></p>
         </div>
         <div>
             <button class="register-button" id="reg-button" type="submit" onclick="registerUser()">Register</button>
