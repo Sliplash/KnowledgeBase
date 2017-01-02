@@ -42,9 +42,25 @@ html, body {
     margin-left: 50px;
 }
 
-@media screen and (max-height: 450px) {
-    .sidenav { padding-top: 15px; }
-    .sidenav a { font-size: 18px; }
+.header {
+    display: none;
+    z-index: 1002;
+    overflow-x: hidden;
+    height: 10vw;
+    width: 10vw;
+    margin-top: 10%;
+    margin-left: 30%;
+    float: left;
+    background-color: #A3B9BA;
+    transition: 0.5s;
+    font-family: "Lucida Console";
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    position: fixed;
+    line-height: 1vw;
+    font-size: 1vw;
+    vertical-align: middle;
 }
 
 .icon {
@@ -68,14 +84,11 @@ body {
 .toggler {
     margin: 10px auto;
     display: block;
+    width: 70px;
 }
 
 .row-2, .row-3, .row-4 {
     margin: 40px auto;
-}
-
-.row-2 {
-
 }
 
 .mini-link {
@@ -112,11 +125,11 @@ body {
     background-color: #A3B9BA;
     width: 50%;
     font-family: "Old English Text MT";
-    margin-left: 50px;
+    margin-left: 11vw;
+    margin-right: 11vw;
     margin-top: 5px;
     align-content: center;
     font-size: 2.5vw;
-    margin-right: 50px;
     line-height: 0.1vw;
     text-align: center;
     border-radius: 5px;
@@ -148,7 +161,7 @@ body {
     font-family: "Verdana";
     font-size: .5vw;
     margin-top: 5px;
-    margin-left: 5px;
+    margin-left: 1vw;
     color: black;
 }
 
@@ -231,6 +244,10 @@ body {
 .register-button {
     alignment: center;
 }
+#reg-button {
+    border-radius: 3px;
+}
+
 #login-button {
     border-radius: 5px;
     -moz-border-radius: 5px;
@@ -263,6 +280,17 @@ body {
     top: 0;
 }
 .overlay-2 {
+     height: 100%;
+     width: 100%;
+     background: rgba(0, 0, 0, 0.5);
+     display: none;
+     z-index: 1001;
+     position: fixed;
+     overflow: auto;
+     left: 0;
+     top: 0;
+ }
+.overlay-3 {
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -273,7 +301,6 @@ body {
     left: 0;
     top: 0;
 }
-
 
 /*
  * CSS for the guide div links and
@@ -343,19 +370,6 @@ p {
     font-size: .8vw;
     min-font-size: .6vw;
 }
-
-@media screen and (max-width: 480px) {
-
-    .infinite-install-win {
-        margin-top: 5px;
-    }
-
-    .login-form {
-        width: 200px;
-        height: 200px;
-    }
-}
-
 .footer {
     text-align: center;
     bottom: 0;
@@ -371,12 +385,13 @@ p {
 
 #validTag1, #validTag2, #validEmailTag, #validFName, #validLName, #validUser, #validPass {
     font-weight: bold;
-
 }
 
-#email1, #email2, #fName, #lName {
-    margin-right: 25px;]
+#email1, #email2, #fName, #lName, #loginEmail, #loginPass {
+    margin-right: 25px;
     font-weight: normal;
+    font-size: 10px;
+    margin-top: 3px;
 }
 
 /*
@@ -390,4 +405,23 @@ input:required:invalid, input:focus:invalid {
 
 input:required:valid, input:focus:valid {
     border: green inset 1px;
+}
+
+
+
+
+
+@media screen and (max-width: 480px) and (max-height: 450px) {
+
+    .infinite-install-win {
+        margin-top: 5px;
+    }
+
+    .login-form {
+        width: 200px;
+        height: 200px;
+    }
+
+    .sidenav { padding-top: 15px; }
+    .sidenav a { font-size: 18px; }
 }

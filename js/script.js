@@ -47,6 +47,18 @@ function closeSignUp() {
     document.getElementById("validTag2").style.background = "none";
 }
 
+function closeHeader() {
+    $('.overlay-3, .header').hide();
+    document.getElementById("email1").value = "";
+    document.getElementById("email2").value = "";
+    document.getElementById("fName").value = "";
+    document.getElementById("lName").value = "";
+    document.getElementById("validEmailTag").innerHTML = "";
+    document.getElementById("validTag1").style.background = "none";
+    document.getElementById("validTag2").style.background = "none";
+}
+
+
 function submitLogin() {
     var userName, password;
     userName = document.getElementById("loginEmail").value;
@@ -98,6 +110,78 @@ function validate() {
 
 }
 
+function clearValidTag() {
+    var tagContent = document.getElementById("validEmailTag").innerHTML.valueOf();
+
+    if(tagContent.indexOf("is valid!") > 0) {
+        document.getElementById("validEmailTag").innerHTML = " ";
+    }
+}
+
+function registerUser() {
+/*
+    var request;
+
+    $("#signUpDataID").submit(function(event){
+
+        event.preventDefault();
+
+        if(request) {
+            request.abort();
+        }
+
+        var $form = $(this);
+
+        var $inputs = $form.find("input");
+
+        var serializedData = $form.serialize();
+
+        $inputs.prop("disabled", true);
+
+        $.ajax({
+            type: "POST",
+            url: "php/newuser.php",
+            data: serializedData,
+            success: done,
+            dataType: text
+        });
+
+        request.done(function (response, textStatus, jqXHR){
+            console.log("It worked!");
+        });
+
+        request.fail(function (jqXHR, textStatus, errorThrown){
+            console.error("Error: " + textStatus, errorThrown);
+        });
+
+        request.always(function () {
+            $inputs.prop("disabled", false);
+        });
+    });
+  */
+   var email1 = document.getElementById("email1").value;
+   var email2 = document.getElementById("email2").value;
+   var fName = document.getElementById("fName").value;
+   var lName = document.getElementById("lName").value;
+   $('.overlay-2, .signup-form').hide();
+   var userConfirm = window.confirm("Welcome! Please confirm the below information is correct:\nEmail: " + email1 + "\nName: " + fName + " " + lName);
+
+
+   if(userConfirm) {
+   $('.overlay-3, .header').show();
+   }
+
+    $.post("../php/newuser.php",
+        {
+            email: email1,
+            fName: fName,
+            lName: lName,
+        },
+        function(data) {
+            alert("Data: " + data);
+        });
+}
+
 var loginApp = angular.module('loginApp', []);
 loginApp.controller('loginCtrl', function ($scope) {
     $scope.user = {
@@ -129,7 +213,6 @@ signUpApp.controller('signUpCtrl', function ($scope) {
         }
     }
 });
-
 
 
 
