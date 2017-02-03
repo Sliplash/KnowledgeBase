@@ -17,6 +17,7 @@
 <div class="container-fluid">
     <!-- First row within container div -->
     <div class="row col-lg-12">
+
         <div onclick="openNav()" class="toggler col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" id="toggle-div">
             <div class="icon" id="top-bar"></div>
             <div class="icon" id="mid-bar"></div>
@@ -110,9 +111,9 @@
         <p id="validLName">Last Name: <input class="signup-input lName" type="text" id="lName" name="lNameData" placeholder="Last" onfocus="clearValidTag()" onkeyup="validate()" required></p>
         <input class="register-button" id="reg-button" type="submit" value="Submit" formtarget="phpTarget">
     </form>
-    <div>
-
-    </div>
+        <div id="new-mem">
+            <p>Please check your email to verify you have registered successfully.</p>
+        </div>
     </div>
     <!-- ## END the sign-up form ## -->
 

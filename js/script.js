@@ -164,7 +164,7 @@ function registerUser() {
    var fName = document.getElementById("fName").value;
    var lName = document.getElementById("lName").value;
    $('.overlay-2, .signup-form').hide();
-   var userConfirm = window.confirm("Welcome! Please confirm the below information is correct:\nEmail: " + email1 + "\nName: " + fName + " " + lName);
+   var userConfirm = window.confirm("Please confirm the below information is correct:\nEmail: " + email1 + "\nName: " + fName + " " + lName);
 
 
    if(userConfirm) {

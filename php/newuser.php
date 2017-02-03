@@ -21,7 +21,7 @@ if(isset($_POST['lNameData'])) {
     $lName = $_POST['lNameData'];
 }
 
-echo "<script> parent.window.location.reload(); document.getElementById('headNote').innerHTML = 'Thank you, please check your email!';</script>";
+
 
 
 
@@ -44,6 +44,12 @@ $stmt->bind_param("sss", $email, $fName, $lName);
 $stmt->execute();
 
 mysqli_close($conn);
+
+
+echo "<script> parent.window.document.getElementById('signUpDataID').style.display = 'none'; parent.window.document.getElementById('new-mem').style.display = 'block';  </script>";
+
+// parent.window.location.reload(); alert('Please check your email!');
+
 
 /*$sql =  "INSERT INTO users (email, fName, lName) VALUES (?, ?, ?)";
 
