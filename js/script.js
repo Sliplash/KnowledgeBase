@@ -7,14 +7,14 @@
 function openNav() {
     document.getElementById("mySidenav").style.width = "10vw";
     document.getElementById("main").style.marginLeft = "200px";
-    document.getElementById("jumbotron").style.marginLeft = "250px";
+    //document.getElementById("jumbotron").style.marginLeft = "250px";
     $('#toggle-div').hide();
 }
 
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-    document.getElementById("jumbotron").style.marginLeft = "100px";
+    document.getElementById("main").style.marginLeft = "0px";
+    //document.getElementById("jumbotron").style.marginLeft = "13vw";
     $('#toggle-div').show();
 }
 
@@ -34,6 +34,10 @@ function openSignUp() {
     document.getElementById("loginEmail").value = "";
     document.getElementById("loginPass").value = "";
     document.getElementById("reg-button").disabled = true;
+    document.getElementById('signUpForm').style.height = '15vw';
+    document.getElementById("new-mem").style.display = "none";
+    document.getElementById("signUpDataID").style.display = "block";
+
 }
 
 function closeSignUp() {
@@ -118,70 +122,6 @@ function clearValidTag() {
     }
 }
 
-function registerUser() {
-/*
-    var request;
-
-    $("#signUpDataID").submit(function(event){
-
-        event.preventDefault();
-
-        if(request) {
-            request.abort();
-        }
-
-        var $form = $(this);
-
-        var $inputs = $form.find("input");
-
-        var serializedData = $form.serialize();
-
-        $inputs.prop("disabled", true);
-
-        $.ajax({
-            type: "POST",
-            url: "php/newuser.php",
-            data: serializedData,
-            success: done,
-            dataType: text
-        });
-
-        request.done(function (response, textStatus, jqXHR){
-            console.log("It worked!");
-        });
-
-        request.fail(function (jqXHR, textStatus, errorThrown){
-            console.error("Error: " + textStatus, errorThrown);
-        });
-
-        request.always(function () {
-            $inputs.prop("disabled", false);
-        });
-    });
-  */
-   var email1 = document.getElementById("email1").value;
-   var email2 = document.getElementById("email2").value;
-   var fName = document.getElementById("fName").value;
-   var lName = document.getElementById("lName").value;
-   $('.overlay-2, .signup-form').hide();
-   var userConfirm = window.confirm("Please confirm the below information is correct:\nEmail: " + email1 + "\nName: " + fName + " " + lName);
-
-
-   if(userConfirm) {
-   $('.overlay-3, .header').show();
-   }
-
-    $.post("../php/newuser.php",
-        {
-            email: email1,
-            fName: fName,
-            lName: lName,
-        },
-        function(data) {
-            alert("Data: " + data);
-        });
-}
-
 var loginApp = angular.module('loginApp', []);
 loginApp.controller('loginCtrl', function ($scope) {
     $scope.user = {
@@ -213,8 +153,3 @@ signUpApp.controller('signUpCtrl', function ($scope) {
         }
     }
 });
-
-
-
-
-

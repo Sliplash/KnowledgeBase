@@ -5,7 +5,6 @@ html, body {
 
 #new-mem {
     display: none;
-    color: ghostwhite;
     text-align: center;
 }
 
@@ -20,7 +19,7 @@ html, body {
     opacity: 1;
     overflow-x: hidden;
     padding-top: 60px;
-    transition: 0.5s;
+    transition: 0.7s;
 }
 
 .sidenav a {
@@ -28,7 +27,7 @@ html, body {
     text-decoration: none;
     font-size: 22px;
     display: block;
-    transition: 0.5s;
+    transition: .7s;
     margin: auto;
     color: black;
 }
@@ -43,9 +42,16 @@ html, body {
 .sidenav .closebtn {
     position: absolute;
     top: 0;
-    right: 0px;
+    right: 0;
     font-size: 36px;
     margin-left: 50px;
+}
+
+#header-img {
+    border-radius: 25px;
+    width: 50%;
+    margin-left: 13vw;
+    margin-right: 13vw;
 }
 
 .header {
@@ -58,7 +64,7 @@ html, body {
     margin-left: 30%;
     float: left;
     background-color: #A3B9BA;
-    transition: 0.5s;
+    transition: 0.7s;
     font-family: "Lucida Console";
     color: black;
     text-align: center;
@@ -77,9 +83,9 @@ html, body {
 }
 
 body {
-    background-color: #4C797B;
+    background: #4C797B no-repeat;
     background-size: cover;
-    background-repeat: no-repeat;
+    transition: all .7s;
 }
 
 .mini-link:hover {
@@ -94,7 +100,8 @@ body {
 }
 
 .row-2, .row-3, .row-4 {
-    margin: 40px auto;
+    margin: 60px auto;
+
 }
 
 .mini-link {
@@ -127,29 +134,15 @@ body {
     visibility: visible;
 }
 
-.jumbotron {
-    background-color: #A3B9BA;
-    width: 50%;
-    font-family: "Old English Text MT";
-    margin-left: 11vw;
-    margin-right: 11vw;
-    margin-top: 5px;
-    align-content: center;
-    font-size: 2.5vw;
-    line-height: 0.1vw;
-    text-align: center;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-}
+.nav-logo-image {
+    height: 95px;
+    width: 95px;
+    padding: auto;
+    margin-top: 350px;
+    position: absolute;
+    margin-left: 25%;
 
-.jumbotron-image {
-    height: 1.25vw;
-    width: 6vw;
-    position: relative;
-    margin-top: 5px;
 }
-
 /*
  * Below CSS is used for:
  * Login / Sign Up forms and buttons
@@ -180,7 +173,7 @@ body {
 
 .login-form {
     width: 20vw;
-    height: 15vw;
+    height: 10vw;
     background-color: #A4B9BF;
     overflow-x: hidden;
     transition: 0.5s;
@@ -196,10 +189,10 @@ body {
 
 .signup-form {
     width: 20vw;
-    height: 20vw;
+    height: 15vw;
     background-color: #A4B9BF;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 1s;
     position: fixed;
     margin-top: 10%;
     margin-left: 30%;
@@ -324,6 +317,7 @@ body {
     margin-left: 10px;
     color: ghostwhite;
     text-decoration: none;
+    display: table-cell;
 }
 
 .infinite-install-win:hover {
@@ -334,34 +328,20 @@ body {
     border: 1px solid ghostwhite;
 }
 
-.install-guides {
+.left-col {
     background-color: #A3B9BA;
+    margin-left: 15px;
     padding-bottom: 15px;
     padding-top: 10px;
     border-radius: 5px;
 }
 
-.config-guides {
+.right-col {
     background-color: #A3B9BA;
     padding-bottom: 15px;
     padding-top: 10px;
     border-radius: 5px;
     margin-left: 10px;
-}
-
-.whats-new {
-    background-color: #A3B9BA;
-    padding-bottom: 15px;
-    padding-top: 10px;
-    border-radius: 5px;
-    margin-left: 10px;
-}
-
-.about-kb {
-    background-color: #A3B9BA;
-    padding-bottom: 15px;
-    padding-top: 10px;
-    border-radius: 5px;
 }
 
 .h2, .h3 {

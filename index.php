@@ -23,24 +23,24 @@
             <div class="icon" id="mid-bar"></div>
             <div class="icon" id="bot-bar"></div>
         </div>
-        <div class="jumbotron jumbotron-fluid col-lg-8" id="jumbotron">Infinite Corporation Knowledge Center</div>
+        <img class="col-lg-8" src="images/ICKC.png" id="header-img"/>
+        <!-- <div class="jumbotron jumbotron-fluid col-lg-8" id="jumbotron">Infinite Corporation Knowledge Center</div> -->
 
         <a href="javascript:void(0)" onclick="openLogin()"><div class="col-lg-1 login-signup">Login</div></a>
         <a href="javascript:void(0)" onclick="openSignUp()"><div class="col-lg-1 login-signup">Register</div></a>
-        <img class="jumbotron-image col-lg-8"src="images/infinite-logo.png" />
     </div>
 
     <!-- Second row within container div -->
     <div class="row row-2 col-lg-12">
-        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 about-kb">
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 left-col">
             <h2 class="h2">About the Knowledge Base</h2>
-            <p>This is the internal knowledge base for Infinite Corporation. Each member will be given permissions to modify and create new pages in certain topics based on their own position. This is intended to help new team members in acclimating to the environment, as well as to train experienced team members in new areas of the company. </p>
+            <p>This is the internal knowledge base for Infinite Corporation. Each member will be given permissions to modify and create new pages in certain topics based on their own position. This is intended to help new team members in acclimating to the environment and understanding what exactly Infinite does. In addition this internal site should be used as a resource for experienced team members to quickly retrieve answers to questions they may have.</p>
         </div>
         <!-- ## Begin spacer ## -->
         <div class="guide-spacer col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
         </div>
         <!-- ## End spacer ## -->
-        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 whats-new">
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 right-col">
             <h2 class="h2">What's New</h2>
             <p>This is the home page for the Infinite Corporation Knowledge Center. Within you will be able to find training documents as well as technical walkthroughs of different areas of Infinite i.</p>
         </div>
@@ -48,7 +48,7 @@
 
     <!-- Third row within container div -->
     <div class="row row-3 col-lg-12">
-        <div class="install-guides col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+        <div class="left-col col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xl-5">
             <h3 class="h3">Install Guides</h3>
             <a href="installs/win2k12-r2.html"><div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 infinite-install-win">Installing Infinite i on Windows 2012 R2 with Update</div></a>
             <a href="#"><div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 infinite-install-win">Installing Infinite i on Windows Server 2016</div></a>
@@ -57,10 +57,26 @@
         <div class="guide-spacer col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
         </div>
         <!-- ## End spacer ## -->
-        <div class="config-guides col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+        <div class="right-col col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xl-5">
             <h3 class="h3">Database Configuration Guides</h3>
             <a href="#"><div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 infinite-install-win">Configuring Infinite i with SQL Server</div></a>
             <a href="#"><div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 infinite-install-win">Configuring Infinite i with Oracle 11g</div></a>
+        </div>
+    </div>
+
+    <!-- Fourth row within container div -->
+    <div class="row row-4 col-lg-12">
+        <div class="left-col col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+            <h3 class="h3">Known Workarounds</h3>
+
+        </div>
+        <!-- ## Begin spacer ## -->
+        <div class="guide-spacer col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+        </div>
+        <!-- ## End spacer ## -->
+        <div class="right-col col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+            <h3 class="h3">Training Materials</h3>
+
         </div>
     </div>
 
@@ -74,11 +90,13 @@
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="index.php"><div class="mini-link">Home</div></a>
+        <a href="#"><div class="mini-link">Training Materials</div></a>
         <a href="installs.html"><div class="mini-link">Installation Guides</div></a>
         <a href="#"><div class="mini-link">Database Guides</div></a>
-        <a href="php-test.php"><div class="mini-link">Common Errors</div></a>
-        <a href="php/phptest.php"><div class="mini-link">Downloads</div></a>
+        <a href="#"><div class="mini-link">Known Workarounds</div></a>
+        <a href="#"><div class="mini-link">Downloads</div></a>
         <a href="request.html"><div class="mini-link">Request Content</div></a>
+        <img src="images/ICKC_Logo.png" class="nav-logo-image" />
     </div>
     <!-- ## END the sidebar nav ## -->
 
@@ -126,6 +144,6 @@
     <iframe style="display:none;" name="phpTarget"></iframe>
     <!-- ## END hidden iFrame ## -->
 </div>
-<footer class="footer">&copy;Infinite Corporation 2016</footer>
+<footer class="footer">&copy;Infinite Corporation 2017</footer>
 </body>
 </html>
